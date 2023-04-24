@@ -1,0 +1,47 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FDD725D1-45E0-4B2C-B5E8-D13BB441C2EE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C82F350E-D7DB-4DC4-AAE2-545ADEFC54F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{C5493544-7091-4450-8BCE-25993F3E81AC}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BodyMassIndexCalculator", "src\BodyMassIndexCalculator\BodyMassIndexCalculator.csproj", "{438F3C33-67D1-43B4-83A2-BC67BC950F32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BodyMassIndexCalculator.UnitTests", "test\BodyMassIndexCalculator.UnitTests\BodyMassIndexCalculator.UnitTests.csproj", "{40CFE01C-E402-43F2-8328-F97359443CC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{438F3C33-67D1-43B4-83A2-BC67BC950F32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{438F3C33-67D1-43B4-83A2-BC67BC950F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{438F3C33-67D1-43B4-83A2-BC67BC950F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{438F3C33-67D1-43B4-83A2-BC67BC950F32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40CFE01C-E402-43F2-8328-F97359443CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40CFE01C-E402-43F2-8328-F97359443CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40CFE01C-E402-43F2-8328-F97359443CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40CFE01C-E402-43F2-8328-F97359443CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{438F3C33-67D1-43B4-83A2-BC67BC950F32} = {FDD725D1-45E0-4B2C-B5E8-D13BB441C2EE}
+		{40CFE01C-E402-43F2-8328-F97359443CC9} = {C82F350E-D7DB-4DC4-AAE2-545ADEFC54F1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B638E538-EFA8-459C-A35E-57B95D8218DE}
+	EndGlobalSection
+EndGlobal
