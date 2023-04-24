@@ -2,15 +2,12 @@ namespace BodyMassIndexCalculator.UnitTests
 {
   public class Tests
   {
-    [SetUp]
-    public void Setup()
-    {
-    }
-
     [Test]
     public void Test1()
     {
-      Assert.Pass();
+      var height = new Height(34);
+
+      var a = height.Equals(new Height(34));
     }
   }
 }
