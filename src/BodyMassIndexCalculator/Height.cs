@@ -13,7 +13,7 @@
 
       this.Value = value;
 
-      static bool IsValid(double value) => value > 0;
+      static bool IsValid(double value) => value > 0 && value < 3;
     }
   }
 }
