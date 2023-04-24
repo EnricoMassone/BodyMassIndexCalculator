@@ -18,8 +18,8 @@ namespace BodyMassIndexCalculator
         throw new ArgumentNullException(nameof(height));
       }
 
-      var index = weight.Value / Pow(height.Value, 2);
-      return Round(index, 2);
+      var bodyMassIndex = weight.Value / Pow(height.Value, 2);
+      return Round(bodyMassIndex, 2);
     }
 
     public static HealthCondition ToHealthCondition(double bmi) =>

@@ -34,7 +34,7 @@ namespace BodyMassIndexCalculator.UnitTests
       Assert.That(exception.ParamName, Is.EqualTo("height"));
     }
 
-    [TestCaseSource(nameof(GetTestCases))]
+    [TestCaseSource(nameof(GetTestCasesForComputeBodyMassIndex))]
     public void ComputeBodyMassIndex_Computes_Body_Mass_Index(Weight weight, Height height, double expected)
     {
       // ACT
@@ -44,11 +44,33 @@ namespace BodyMassIndexCalculator.UnitTests
       Assert.That(result, Is.EqualTo(expected));
     }
 
-    public static IEnumerable<object[]> GetTestCases()
+    [TestCaseSource(nameof(GetTestCasesForToHealthCondition))]
+    public void ToHealthCondition_Converts_Body_Mass_Index_To_Health_Condition(double bmi, HealthCondition expected)
+    {
+      // ACT
+      var result = ToHealthCondition(bmi);
+
+      // ASSERT
+      Assert.That(result, Is.EqualTo(expected));
+    }
+
+    private static IEnumerable<object[]> GetTestCasesForComputeBodyMassIndex()
     {
       yield return new object[] { new Weight(70), new Height(1.80), 21.60 };
       yield return new object[] { new Weight(80), new Height(1.20), 55.56 };
       yield return new object[] { new Weight(50), new Height(1.80), 15.43 };
+    }
+
+    private static IEnumerable<object[]> GetTestCasesForToHealthCondition()
+    {
+      yield return new object[] { 13, HealthCondition.Underweight };
+      yield return new object[] { 18.4, HealthCondition.Underweight };
+      yield return new object[] { 18.5, HealthCondition.Healthy };
+      yield return new object[] { 20, HealthCondition.Healthy };
+      yield return new object[] { 24.9, HealthCondition.Healthy };
+      yield return new object[] { 25, HealthCondition.Overweight };
+      yield return new object[] { 26, HealthCondition.Overweight };
+      yield return new object[] { 30, HealthCondition.Overweight };
     }
   }
 }
