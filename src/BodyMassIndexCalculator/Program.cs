@@ -10,8 +10,18 @@ namespace BodyMassIndexCalculator
       Run(ReadInputFromUser, WriteToConsole);
     }
 
-    private static void Run(Func<string, double> reader, Action<HealthCondition> writer)
+    public static void Run(Func<string, double> reader, Action<HealthCondition> writer)
     {
+      if (reader is null)
+      {
+        throw new ArgumentNullException(nameof(reader));
+      }
+
+      if (writer is null)
+      {
+        throw new ArgumentNullException(nameof(writer));
+      }
+
       var height = reader("Please enter your height in meters");
       var weight = reader("Please enter your weight in kilograms");
 
