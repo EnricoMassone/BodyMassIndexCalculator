@@ -2,6 +2,7 @@ using static BodyMassIndexCalculator.Functions;
 
 namespace BodyMassIndexCalculator.UnitTests
 {
+  [TestFixture]
   public sealed class FunctionsTest
   {
     [Test]
